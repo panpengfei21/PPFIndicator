@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "PPFIndicator"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "有平滑效果的指示器"
 
   # This description is used to generate tags and improve search results.
@@ -25,7 +25,8 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
  # spec.description  = <<-DESC
-  #                 DESC
+  #                 INDICATOR
+   #                   DESC
 
   spec.homepage     = "https://github.com/panpengfei21/PPFIndicator"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"

@@ -15,6 +15,7 @@
 		04370A0922ADE96E0044EA0A /* PPFIndicatorbackgroundV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04370A0722ADE96D0044EA0A /* PPFIndicatorbackgroundV.swift */; };
 		04370A0A22ADE96E0044EA0A /* PPFIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04370A0822ADE96D0044EA0A /* PPFIndicator.swift */; };
 		04370A0D22ADEA1C0044EA0A /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04370A0C22ADEA1C0044EA0A /* UIColor+extension.swift */; };
+		047808F222AE31D8004EB349 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 047808F122AE31D8004EB349 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,9 @@
 		04370A0722ADE96D0044EA0A /* PPFIndicatorbackgroundV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPFIndicatorbackgroundV.swift; sourceTree = "<group>"; };
 		04370A0822ADE96D0044EA0A /* PPFIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PPFIndicator.swift; sourceTree = "<group>"; };
 		04370A0C22ADEA1C0044EA0A /* UIColor+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		047808EF22AE31D7004EB349 /* PPFIndicator-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PPFIndicator-Bridging-Header.h"; sourceTree = "<group>"; };
+		047808F022AE31D8004EB349 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		047808F122AE31D8004EB349 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,9 @@
 				043709FE22ADE8C60044EA0A /* LaunchScreen.storyboard */,
 				04370A0C22ADEA1C0044EA0A /* UIColor+extension.swift */,
 				04370A0122ADE8C60044EA0A /* Info.plist */,
+				047808F022AE31D8004EB349 /* TestViewController.h */,
+				047808F122AE31D8004EB349 /* TestViewController.m */,
+				047808EF22AE31D7004EB349 /* PPFIndicator-Bridging-Header.h */,
 			);
 			path = PPFIndicator;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 				TargetAttributes = {
 					043709F122ADE8C50044EA0A = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -152,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047808F222AE31D8004EB349 /* TestViewController.m in Sources */,
 				04370A0A22ADE96E0044EA0A /* PPFIndicator.swift in Sources */,
 				04370A0922ADE96E0044EA0A /* PPFIndicatorbackgroundV.swift in Sources */,
 				04370A0D22ADEA1C0044EA0A /* UIColor+extension.swift in Sources */,
@@ -302,6 +311,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3G99T2JL44;
 				INFOPLIST_FILE = PPFIndicator/Info.plist;
@@ -312,6 +322,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fwzspt.PPFIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PPFIndicator/PPFIndicator-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -321,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3G99T2JL44;
 				INFOPLIST_FILE = PPFIndicator/Info.plist;
@@ -331,6 +344,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.fwzspt.PPFIndicator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "PPFIndicator/PPFIndicator-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

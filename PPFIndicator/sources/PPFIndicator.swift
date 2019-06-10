@@ -8,12 +8,12 @@
 
 import UIKit
 
-public protocol PPFIndicator_delegate:class {
+@objc public protocol PPFIndicator_delegate:class {
     func indicator(view:PPFIndicator,didSelected index:Int)
 }
 
 
-public class PPFIndicator: UIView {
+@objc public class PPFIndicator: UIView {
     /// 一个item的宽度
     let itemWidth:CGFloat
     /// 高度
@@ -26,7 +26,7 @@ public class PPFIndicator: UIView {
     
     weak var delegate:PPFIndicator_delegate?
     
-    public init(itemWidth:CGFloat,height:CGFloat) {
+    @objc public init(itemWidth:CGFloat,height:CGFloat) {
         self.itemWidth = itemWidth
         self.height = height
         super.init(frame: CGRect.zero)
@@ -70,7 +70,8 @@ public class PPFIndicator: UIView {
         backgroundView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true
     }
     
-    open func setUI(texts:[String]) {
+    /// 设置UI,分别显示什么文字
+    @objc open func setUI(texts:[String]) {
         backgroundView.setupUI(titles: texts, textColor: UIColor.black)
         frontgroundView.setupUI(titles: texts, textColor: UIColor.white)
         
@@ -112,45 +113,50 @@ public class PPFIndicator: UIView {
         delegate?.indicator(view: self, didSelected: index)
     }
     
-    
-    open func selectItemAtIndex(_ index:Int) {
+    /// 选择哪个索引
+    @objc open func selectItemAtIndex(_ index:Int) {
         frontgroundView.showIndex(index)
         delegate?.indicator(view: self, didSelected: index)
     }
-    
-    open func setCornerRadius(_ radius:CGFloat){
+    /// 设置圆角的半径
+    @objc open func setCornerRadius(_ radius:CGFloat){
         frontgroundView.mask?.layer.cornerRadius = radius
         backgroundView.layer.cornerRadius = radius
     }
     
     /// 设置背景label的颜色
-    open func setBackgroundLabel(colors:[UIColor]) {
+    @objc open func setBackgroundLabel(colors:[UIColor]) {
         backgroundView.setColors(colors)
     }
     
     /// 设置背景label的颜色
-    open func setBackgroundLabel(unqiueColor:UIColor) {
+    @objc open func setBackgroundLabel(unqiueColor:UIColor) {
         backgroundView.setUniqueColor(unqiueColor)
     }
     
-    open func setFrontgroundLabel(colors:[UIColor]){
+    /// 设置前景字体颜色
+    @objc open func setFrontgroundLabel(colors:[UIColor]){
         frontgroundView.setColors(colors)
     }
-    open func setFrontgroundLabel(uniqueColor:UIColor){
+    /// 设置统一的前景字体颜色
+    @objc open func setFrontgroundLabel(uniqueColor:UIColor){
         frontgroundView.setUniqueColor(uniqueColor)
     }
-    open func setFrontgroundColor(_ color:UIColor){
+    /// 设置前景颜色
+    @objc open func setFrontgroundColor(_ color:UIColor){
         frontgroundView.backgroundColor = color
     }
-    open func setBackgroundColor(_ color:UIColor){
+    /// 设置背景颜色
+    @objc(setIndicatorBackgroundColor:) open func setBackgroundColor(_ color:UIColor){
         backgroundView.backgroundColor = color
     }
-    
-    open func setLabel(fonts:[UIFont]){
+    /// 设置文字的字体
+    @objc open func setLabel(fonts:[UIFont]){
         backgroundView.setFonts(fonts)
         frontgroundView.setFonts(fonts)
     }
-    open func setLabel(uniqueColor:UIFont){
+    /// 设置文字的统一字体
+    @objc open func setLabel(uniqueColor:UIFont){
         backgroundView.setUniqueFont(uniqueColor)
         frontgroundView.setUniqueFont(uniqueColor)
     }
