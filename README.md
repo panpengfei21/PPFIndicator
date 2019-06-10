@@ -3,10 +3,14 @@
 
 # 引用
 1. cocoapods
-   pod 'PPFIndicator'
+```
+pod 'PPFIndicator'
+```
 2. 直接把sources里的文件拷贝到你的项目里
+```
 `PPFIndicator.swift`
 `PPFIndicatorbackgroundV.swift`
+```
 
 # 怎么用
 
