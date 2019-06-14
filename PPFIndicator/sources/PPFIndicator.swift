@@ -9,7 +9,7 @@
 import UIKit
 
 @objc public protocol PPFIndicator_delegate:class {
-    func indicator(view:PPFIndicator,didSelected index:Int)
+    func ppfIndicator(view:PPFIndicator,didSelected index:Int)
 }
 
 
@@ -24,7 +24,7 @@ import UIKit
     
     private var buttons:[UIButton] = []
     
-    weak var delegate:PPFIndicator_delegate?
+    public weak var delegate:PPFIndicator_delegate?
     
     @objc public init(itemWidth:CGFloat,height:CGFloat) {
         self.itemWidth = itemWidth
@@ -110,13 +110,13 @@ import UIKit
             return
         }
         selectItemAtIndex(index)
-        delegate?.indicator(view: self, didSelected: index)
+        delegate?.ppfIndicator(view: self, didSelected: index)
     }
     
     /// 选择哪个索引
     @objc open func selectItemAtIndex(_ index:Int) {
         frontgroundView.showIndex(index)
-        delegate?.indicator(view: self, didSelected: index)
+        delegate?.ppfIndicator(view: self, didSelected: index)
     }
     /// 设置圆角的半径
     @objc open func setCornerRadius(_ radius:CGFloat){

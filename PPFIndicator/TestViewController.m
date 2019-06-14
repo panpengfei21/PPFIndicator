@@ -19,7 +19,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     PPFIndicator * indicator = [[PPFIndicator alloc] initWithItemWidth:100 height:30];
-//    indicator setui
 }
 
 /*
