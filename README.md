@@ -1,14 +1,19 @@
-#效果
+# 效果
 ![示例](https://upload-images.jianshu.io/upload_images/2261768-cb94cf9d43c9df9a.gif?imageMogr2/auto-orient/strip)
 
-#引用
+# 引用
 1. cocoapods
-   pod 'PPFIndicator'
+```
+pod 'PPFIndicator'
+```
 2. 直接把sources里的文件拷贝到你的项目里
+```
 `PPFIndicator.swift`
 `PPFIndicatorbackgroundV.swift`
+```
 
-#怎么用
+# 怎么用
+
 ```
 import PPFIndicator
 ```
